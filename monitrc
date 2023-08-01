@@ -1,0 +1,6 @@
+set mailserver smpt.gamil.com port 587
+username "yokesh2002@gmail.com" password "pass@123"
+with timeout 30 seconds
+
+check fikr /home/yokesh/week3/system_info.log
+    if size > 2 MB then alert
