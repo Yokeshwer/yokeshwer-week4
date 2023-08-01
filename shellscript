@@ -1,0 +1,7 @@
+file="system_info.log"
+date > $file
+top >> $file
+free -h >> $file
+swapon -s >> $file
+ps -eo pid,usr,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 5 >> $file
+ps -eo pid,usr,ppid,cmd,%mem,%cpu --sort=-%mem | head -n 5 >> $file
